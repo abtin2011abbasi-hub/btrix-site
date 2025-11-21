@@ -1,0 +1,85 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --accent:#0b76ff;
+  --text:#222;
+  --muted:#666;
+  --container-width:1100px;
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width:var(--container-width);
+  margin:0 auto;
+  padding:20px;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg,#0f172a,#071032);
+  color:#fff;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+.logo-area{display:flex;align-items:center;gap:12px}
+.logo{width:64px;height:64px;object-fit:cover;border-radius:10px}
+.logo.small{width:48px;height:48px}
+.brand h1{margin:0;font-size:18px}
+.tag{margin:0;font-size:13px;color:rgba(255,255,255,0.8)}
+
+/* Navigation */
+.main-nav{display:flex;align-items:center;gap:12px}
+.nav-link{color:rgba(255,255,255,0.9);text-decoration:none;padding:8px 12px;border-radius:8px}
+.nav-link:hover{background:rgba(255,255,255,0.06)}
+.nav-link.active{background:rgba(255,255,255,0.12)}
+.mobile-toggle{display:none;background:transparent;border:none;color:#fff;font-size:22px}
+
+/* Hero */
+.hero{
+  padding:48px 0;
+  background: linear-gradient(180deg, rgba(11,118,255,0.08), transparent 40%);
+}
+.hero-inner{text-align:center;padding:30px}
+.hero h2{margin:0 0 12px 0;font-size:28px}
+.hero p{margin:0 0 18px;color:var(--muted)}
+.cta{display:inline-block;padding:12px 20px;background:var(--accent);color:#fff;border-radius:10px;text-decoration:none;transition:0.25s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(11,118,255,0.15)}
+
+/* Features */
+.features{display:flex;gap:20px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+.feature-card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(13,20,40,0.06);width:320px;text-align:center}
+.btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:#111827;color:#fff;text-decoration:none}
+.btn-telegram{display:inline-block;padding:10px 14px;border-radius:10px;background:#0088cc;color:#fff;text-decoration:none}
+.btn-telegram.large{padding:14px 20px;font-weight:700}
+.lead{color:var(--muted)}
+
+/* Product page */
+.product-page{padding:30px 0}
+.product-hero{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05);margin-bottom:18px;text-align:center}
+.product-details{background:#fff;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+
+/* Footer */
+.site-footer{padding:18px 0;background:#0b1220;color:#fff;margin-top:30px;text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
+
+/* Utilities */
+ul{padding-left:1.1rem}
+@media (max-width:900px){
+  .header-inner{flex-direction:column;gap:10px;align-items:flex-start}
+  .main-nav{gap:8px;flex-wrap:wrap}
+  .mobile-toggle{display:block}
+  .features{flex-direction:column;align-items:center}
+}
